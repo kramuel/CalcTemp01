@@ -55,7 +55,7 @@ namespace CalcTemp01
         static void PrintMenu()
         {
             Console.Clear();
-            Console.WriteLine("Hello welcome to converter, please choose:");
+            Console.WriteLine("*Hello welcome to my temperature converter!*");
             Console.WriteLine("1: Convert from Celsius to Fahrenheit.");
             Console.WriteLine("2: Convert from Fahrenheit to Celsius.");
             Console.WriteLine("3: Convert from Celsius to Kelvin.");
@@ -68,9 +68,11 @@ namespace CalcTemp01
        
         static int GetUsrSel()
         {
-            int userInput = int.Parse(Console.ReadLine());
-            //input can only be 0-4
             int[] menuInt = new int[5] { 1, 2, 3, 4, 0 };
+            int userInput = int.Parse(Console.ReadLine());
+            
+            
+            //input can only be 0-4
             while (!menuInt.Contains(userInput))
             {
                 //wrong input loop
